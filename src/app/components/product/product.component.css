@@ -1,0 +1,139 @@
+/* General product container styling */
+
+.product {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+
+/* Title styling */
+
+.product__title {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+
+/* Grid layout for product list */
+
+.product__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 columns for mobile by default */
+    gap: 20px;
+}
+
+
+/* Product item styling */
+
+.product__item {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+/* Image styling to make it smaller */
+
+.product__item-image {
+    width: 100%;
+    /* Adjust width to be responsive */
+    max-width: 150px;
+    /* Limit the maximum width of the image */
+    height: auto;
+    /* Maintain the aspect ratio */
+    margin-bottom: 10px;
+    /* Space between image and other content */
+}
+
+.product__item-name {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.product__item-category {
+    color: #666;
+}
+
+.product__item-price {
+    color: green;
+    font-weight: bold;
+}
+
+.product__item-remove {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.product__item-remove:hover {
+    background-color: darkred;
+}
+
+
+/* Media Queries for responsiveness */
+
+
+/* Tablet (3 columns) */
+
+@media (min-width: 600px) {
+    .product__list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+/* Desktop (5 columns) */
+
+@media (min-width: 1024px) {
+    .product__list {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+
+/* Form styling with Flexbox */
+
+.product__form {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.product__form-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.product__form-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.product__form-input {
+    padding: 8px;
+    width: 100%;
+    border: 1px solid #ccc;
+}
+
+.product__form-button {
+    padding: 10px;
+    background-color: green;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.product__form-button:hover {
+    background-color: darkgreen;
+}
