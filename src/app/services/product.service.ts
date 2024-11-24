@@ -1,12 +1,5 @@
 import { Injectable } from '@angular/core';
-
-interface Product {
-  id: number;
-  name: string;
-  category: string;
-  price: number;
-  image: string;
-}
+import { Product } from '../models/product.model'; // Import the Product model from the model file
 
 @Injectable({
   providedIn: 'root'
